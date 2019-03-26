@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+        
+            .div01{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: absolute;
+                left: 100px;
+                top:100px;
+                /* transition: left 2s linear 2s; */
+                /* transition: all 2s steps(10); */
+                /* steps()可以设置完成过渡的步数 */
+                transition: all 2s steps(10);
+                -moz-transition: all 2s steps(10);/* -moz-transition:支持firefox */
+                -webkit-transition: all 2s steps(10);/* -webkit-transition:支持chrome */
+                -o-transition: all 2s steps(10);
+            }
+            .div01:active{
+                left: 1000px;
+                background-color: greenyellow;
+                /* transition: left 2s linear 2s; */
+            }
+            /* 
+                transition:就是过渡
+                有以下参数：
+                1.选择过渡的css属性
+                2.时间，就是完成过渡的时间,时间是以秒s作为单位的
+                3.运动方式:匀速 linear,默认 ease
+                4.过渡效果的延迟:就是延迟多少时间开始执行过渡效果
+            
+             */
+
+        </style>
+    </head>
+    <body>
+        <div class="div01"></div>
+    </body>
+</html>

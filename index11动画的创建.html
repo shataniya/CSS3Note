@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+
+        <style>
+        
+            .div01{
+                width: 100px;
+                height: 100px;
+                background-color: greenyellow;
+
+                /* 
+                    添加动态效果
+
+
+                 */
+                 /* animation-name 就是指定动画的名称，这里可以是moveTest */
+                animation-name: moveTest;
+
+                /* animation-duration 就是完成动画所用的时间 */
+                animation-duration: 2s;
+
+                /* 设置动画播放次数，默认是1次 可以指定具体的数值，也可以指定infinite，就是无限次*/
+                /* animation-iteration-count:就是设置动画播放的次数 */
+                animation-iteration-count: 3;
+
+                /* 设置交替动画 */
+                animation-direction: alternate;
+
+                /* 设置动画的延迟 */
+                animation-delay: 2s;/* 说明动画延迟指定时间之后就会开始启动 */
+
+                /* 默认情况下，动画执行完之后就会回到初始状态 */
+                animation-fill-mode: backwards;
+                /* animation-fill-mode:有三个值：
+                    1.forwards:就是动画结束之后，就会保持结束的状态，但是在有动画延迟的情况下，不会立刻进入初始状态    
+                    2.backwards:如果动画有初始状态，在添加动画延迟的情况下，那么会立刻进入到初始状态
+                    3.both:就是包含前面两个的所有属性
+                 */
+
+                 /* 动画的时间函数 */
+                 animation-timing-function: linear;/* linear就是匀速 */
+
+                 /* 设置动画的状态 paused 暂停  running 播放 */
+                 /* animation-play-state: paused; */
+            }
+
+            /* 创建动画 */
+            @keyframes moveTest {/* moveTest是动画的名称 */
+                /* 百分比就是时间的百分比 */
+                /* 在创建动画的过程当中可以任意添加若干个关键帧 */
+                /* from:0% */
+                0%{
+                    transform: translate(0,0);
+                }
+                50%{
+                    transform: translate(300px,200px);
+                }
+                /* to:100% */
+                100%{
+                    transform: translate(400px,500px);
+                }
+                /* 0%和100%指的是开始和结束 */
+            }
+        
+        </style>
+
+    </head>
+    <body>
+        <button class="btn btn-info" type="button" id="pause">pause</button>
+        <button class="btn btn-warning" type="button" id="running">running</button>
+        <div class="div01"></div>
+
+        <script>
+            $('#pause').click(function(){
+                $('.div01').css('animation-play-state','paused');
+            });
+            $('#running').click(function(){
+                $('.div01').css('animation-play-state','running');
+            });
+        </script>
+
+    </body>
+</html>

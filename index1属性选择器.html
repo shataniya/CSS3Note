@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+
+        <style>
+        
+            li[class]{
+                background-color: aqua;
+            }
+            li[style]{
+                text-decoration: underline;
+            }
+            /* E[attr]:表示含有attr属性的E标签 */
+
+            li[class=three]{
+                font-size: 30px;
+            }
+            /* E[attr=value]:表示含有attr属性并且属性值是value的E标签 */
+
+            li[class*=one]{
+                font-style: italic;
+            }
+            /* E[attr*=value]:*号表示包含attr属性并且属性值包含value的E标签 */
+
+            li[class$=one]{
+                font-size: 40px;
+            }
+            /* E[attr$=value]:$表示以什么结尾，就是表示含有attr属性并且属性值是以value结尾的E标签 */
+
+            li[class^=one]{
+                font-size: 30px;
+                font-weight: 100;
+            }
+            /* 同理 */
+            /* E[attr^=value]:^表示以什么开头，就是表示含有attr属性并且属性值是以value开头的E标签 */
+        
+        </style>
+
+    </head>
+    <body>
+        <ul>
+            <li class="one five" id="one">one</li>
+            <li class="two" id="two" style="">two</li>
+            <li class="three" id="three">three</li>
+            <li class="four" id="four" style="">four</li>
+            <li class="five one" id="five">five</li>
+        </ul>
+
+        <script>
+        
+        </script>
+
+    </body>
+</html>

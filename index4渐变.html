@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+
+        <style>
+        
+            .div01{
+                width: 300px;
+                height:300px;
+                /*  linear-gradient(方向，开始颜色，位置，颜色2，位置，颜色3，位置...) 
+                    to top:0deg;
+                    to right:90deg;
+                    to bottom:180deg;默认是 to bottom
+                    to left:270deg;
+                */
+                background: linear-gradient(to left,pink,skyblue);
+            }
+            .div02{
+                width: 300px;
+                height:300px;
+                /* 添加径向渐变 */
+                /* 
+                    radial-gradient(形状，大小，位置，颜色)
+                    1.shape:circle,ellipse(椭圆)
+                    2.粗略描述渐变路径：closest-side:最近边,farthest-side:最远边,closest-corner:最近角,farthest-corner:最远角
+                    3.position:at position;描述中心点的位置
+                
+                */
+                background: radial-gradient(circle closest-side at 50px 50px,red,green);
+            }
+            .div03{
+                width: 300px;
+                height:300px;
+                /* 添加重复渐变 */
+                /* 
+                    重复线性渐变
+                    repeating-linear-gradient()
+
+                    重复径向渐变
+                    repeating-radial-gradient()
+                
+                */
+                background: repeating-linear-gradient(45deg,pink 0%,pink 10%,skyblue 10%,skyblue 20%);
+                /* background: repeating-radial-gradient(#fff 0%,#fff 10%,#000 10%,#000 20%); */
+            }
+            .div04{
+                width: 400px;
+                height:400px;
+                /* background: linear-gradient(45deg,pink,skyblue); */
+                /* background: linear-gradient(to left,pink,skyblue); */
+                /* background: radial-gradient(pink,purple); */
+                /* background: radial-gradient(circle closest-side at 100px 100px,pink,purple); */
+                /* background: radial-gradient(circle closest-corner at 100px 100px,pink,purple); */
+                /* background: radial-gradient(circle farthest-corner at 100px 100px,pink,purple); */
+                /* background: repeating-radial-gradient(circle closest-side at 100px 100px,pink,purple); */
+                /* background: repeating-linear-gradient(45deg,pink,purple); */
+            }
+        
+        </style>
+
+    </head>
+    <body>
+
+        <div class="div01"></div>
+        <div class="div02"></div>
+        <div class="div03"></div>
+        <div class="div04"></div>
+
+        <script>
+        
+            /* 线性渐变：就是沿着某一条直线或者说方向产生的渐变效果 */
+            /* 
+                linear-gradient:derection,
+            
+            
+             */
+
+             /* 径向渐变 */
+
+             /* 重复渐变 */
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+
+            body{
+                padding: 0;
+                margin: 0;
+                background-image: url('img/07.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        
+            .box{
+                width: 200px;
+                height: 200px;
+                position: relative;
+                margin: 200px auto;
+                transform: rotate3d(1,1,0,45deg);
+                /* background-color: aqua; */
+                transform-style: preserve-3d;/* 保留3d变换之后的结果 */
+                transition: all 1.5s;
+            }
+            .box:hover{
+                transform: rotate3d(1,1,1,90deg);
+            }
+            .box>div{
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                opacity: 0.8;/* 设置透明度 */
+                transition: all 1.5s;
+                background-image: url('img/06.png');
+                background-repeat: no-repeat;
+                color: white;
+                font-size: 50px;
+                line-height: 200px;
+                text-indent: 75px;
+            }
+            .front{
+                /* background-color: cornflowerblue; */
+                transform: translateZ(100px) rotateY(0deg);
+            }
+            .back{
+                /* background-color: chartreuse; */
+                transform: translateZ(-100px) rotateY(180deg);
+            }
+            .top{
+                /* background-color: blueviolet; */
+                transform: translateY(-100px) rotateX(-90deg);
+            }
+            .bottom{
+                /* background-color: deeppink; */
+                transform: translateY(100px) rotateX(-90deg);
+            }
+            .left{
+                /* background-color:fuchsia; */
+                transform: translateX(-100px) rotateY(-90deg);
+                /* 沿着正轴方向角度就是正值，沿着负轴方向角度就是负值 */
+            }
+            .right{
+                /* background-color: orangered; */
+                transform: translateX(100px) rotateY(90deg);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="front">傻</div>
+            <div class="back">呀</div>
+            <div class="top">真</div>
+            <div class="bottom">傻</div>
+            <div class="left">她</div>
+            <div class="right">你</div>
+        </div>
+
+        <script>
+        
+            $('.box').hover(function(){
+                $('.front').css('transform','translateZ(200px) rotateY(360deg)');
+                $('.back').css('transform','translateZ(-200px) rotateY(-180deg)');
+                $('.top').css('transform','translateY(-200px) rotateX(-90deg)');
+                $('.bottom').css('transform','translateY(200px) rotateX(-90deg)');
+                $('.left').css('transform','translateX(-200px) rotateY(90deg)');
+                $('.right').css('transform','translateX(200px) rotateY(90deg)');
+            },function(){
+                $('.front').css('transform','translateZ(100px) rotateY(0deg)');
+                $('.back').css('transform','translateZ(-100px) rotateY(+180deg)');
+                $('.top').css('transform','translateY(-100px) rotateX(270deg)');
+                $('.bottom').css('transform','translateY(100px) rotateX(270deg)');
+                $('.left').css('transform','translateX(-100px) rotateY(-270deg)');
+                $('.right').css('transform','translateX(100px) rotateY(-270deg)');
+            });
+        
+        
+        </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+        
+            .div01{
+                width: 100px;
+                height: 100px;
+                background-color: aqua;
+                transition: transform 2s;
+            }
+            .div01:active{
+                /* translate3d() 就是实现3d移动
+                translate3d(x,y,z)
+                    要有三个值：分别对应x,y,z
+                
+                 */
+                transform: translate3d(500px,500px,500px);
+
+                /* scale3d() 就是实现3d的缩放
+                    scale3d(x,y,z)
+                
+                 */
+
+                /* rotate3d() 就是实现3d的旋转
+                    rotate3d(x,y,z,angle)
+                    1.x表示x方向的向量，例如x=1，那么就是x轴正向的单位向量，也就是说，是沿着x轴旋转的
+                    2.y表示y方向的向量
+                    3.z表示z方向的向量
+                    3.angle表示
+                 */
+                transform: rotate3d(1,1,0,130deg);
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="div01"></div>
+        <div class="div02"></div>
+        <div class="div03"></div>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+        
+            .div01{
+                width: 100px;
+                height: 100px;
+                background-color: aqua;
+                transition: all 2s;
+            }
+            .div01:active{
+                /* transform实现2D元素的移动
+                    translate(x,y);移动是参照元素的左上角，执行完毕之后会恢复到最初的状态
+                    注意事项：
+                    1.如果只有一个值，那就是只有x,也就是说只有水平方向的移动,后者使用 translateX()
+                    2.如果有两个值，那分别是x和y，也就是斜向移动
+                    3.如果想只想y方向移动，那么可以把x值设置为0，或者使用 translateY()
+                 */
+                 /* transform: translate(500px); */
+                 background-color: pink;
+                 transform: translate(500px,500px) scale(3,3) rotate(720deg);
+
+                 /* transform实现2D元素的缩放
+                    scale(x,y);里面的数值是数字，而不是带有px的字符串，并且数值大于1为放大，小于1为缩小
+                    注意事项：
+                    1.如果只有一个值，那么默认是x和y都是这个值，那么x和y都会同等程度的放缩
+                    2.如果有两个值，那么第一个是x，第二个是y
+
+                    transform在进行2D变换的时候是不会影响其他元素的
+                 
+                  */
+                
+                /* transform实现2D旋转
+                    rotate();只能写一个值，这个值就是旋转的角度，如果是正直，那么就是顺时针旋转，如果是负值，就是逆时针旋转
+                    注意角度后面要跟上deg，例如想要旋转30度，就是30deg
+                
+                 */
+
+                /* transform设置旋转轴心
+                    transform-origin
+                    1.x,y
+                    2.关键字：left right top bottom
+                 */
+                /* transform-origin: right top; */
+            }
+
+            .div02{
+                width: 100px;
+                height: 100px;
+                background-color: blueviolet;
+                /* transform实现斜切
+                    skew();有两个值，这个值就是角度
+                    1.如果只有一个值，那么是x值，也就是水平切，如果是正值，那么沿着轴的负方向斜切，如果是负值，那么沿着轴的正方向斜切
+                    2.如果有两个值，那么就是分别是x值和y值，先执行完x值，再执行y值
+                
+                 */
+                transition: transform 2s;
+            }
+            .div02:active{
+                transform: skew(30deg,30deg);
+            }
+
+            .div03{
+                width: 200px;
+                height: 200px;
+                background-color: chartreuse;
+                /* 可以利用transform来定位居中 */
+                position: absolute;/* 开启定位，这里是相对于body的 */
+                /* 水平偏移50%，垂直偏移50% */
+                left: 50%;
+                top: 50%;
+                /* 然后再利用transform里的translate()往回偏移 */
+                transform: translate(-50%,-50%);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="div01"></div>
+        <div class="div02"></div>
+        <div class="div03"></div>
+    </body>
+</html>

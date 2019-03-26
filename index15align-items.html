@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <!-- <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css"> -->
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+        
+            .box{
+                width: 1200px;
+                /* 如果宽度不够的时候，那么子元素的盒子就会自动收缩，这就是当父级元素变成伸缩盒子的时候，子元素变成伸缩项的体现 */
+                height: 500px;
+                border: 1px solid #ff6700;
+                /* dsiplay:flex;就是把父级元素或者说父级容器变成一个伸缩盒子,那么会自动让子元素变成一个伸缩项 */
+                display: flex;
+                justify-content:space-around;
+
+                /* 怎么让子元素在垂直中心排列呢？胡走着说怎么控制子元素的垂直排列呢？
+                    align-items就是来干这个事儿的
+                    align-items:控制子元素的垂直排列方式
+                    1.flex-start 在顶部
+                    2.flex-end 在底部
+                    3.center 在中间
+                    4.stretch 拉伸,作用是让子元素在垂直方向上拉伸，直到填充整个高度，当然有一个前提，就是子元素的高度不能被确定，一旦确定了就失效了
+                    5.baseline 基线，就是设置基线对齐，意思就是把子元素压缩到只有文本这么高，当然前提也是子元素的高度不能被确定，一旦确定就是失效了
+                 */
+                
+                align-items: baseline;
+
+            }
+            .first{
+                width: 200px;
+                /* height: 200px; */
+                background-color: red;
+            }
+            .second{
+                width: 200px;
+                /* height: 200px; */
+                background-color: green;
+            }
+            .third{
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+            }
+            .fourth{
+                width: 200px;
+                /* height: 200px; */
+                background-color: greenyellow;
+            }
+            .fifth{
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="first">1</div>
+            <div class="second">2</div>
+            <div class="third">3</div>
+            <div class="fourth">4</div>
+            <div class="fifth">5</div>
+        </div>
+    </body>
+</html>

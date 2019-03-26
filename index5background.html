@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+
+        <style>
+        
+            .div01{
+                width: 1226px;
+                height: 1000px;
+                background-image: url('img/05.png');
+                /* background-repeat:描述背景图片的平铺
+                    1.no-repeat:就是不平铺
+                    2.repeat-x:就是只有水平平铺
+                    3.repeat-y:就是只有垂直平铺
+                    4.round:就是来把图片缩放来为适应指定区域的大小
+                    5.space：就是通过等间距的空隙插入图片之间，使平铺后的图片能适应指定区域的大小
+                
+                 */
+                background-repeat: space;
+                background-attachment:local;
+                /* background-attachment:就是指定背景图片在运动的情况下要指定的活动方式
+                    1.fixed 就是容器滚动的话，图片不会随着滚动
+                    2.sroll 就是容器滚动的话，图片会随着滚动，但是内容滚动的话，图片不会随之滚动
+                    3.local 就是当内容滚动的时候，图片会随之滚动
+                
+                 */
+            }
+            .div02{
+                width: 100%;
+                height: 800px;
+                background-image: url('img/02.png');
+                /* 
+                    background-size:就是选择图片适应容器的方式
+                    1.contain:就是容器会包含整个图片，但是有可能会留下空白的区域
+                    2.cover:就是让图片自适应然后包含容器，同时容器只会占据图片的一片区域
+                
+                 */
+                background-size: cover;
+                /* 
+                    backgorund-position:就是设置图片的位置
+                
+                 */
+                background-position: center;
+            }
+        
+        </style>
+
+
+    </head>
+    <body>
+        <div class="div01"></div>
+        <div class="div02"></div>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <!-- <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css"> -->
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+        
+            .box{
+                width: 1200px;
+                height: 500px;
+                border: 1px solid #ff6700;
+                /* dsiplay:flex;就是把父级元素或者说父级容器变成一个伸缩盒子,那么会自动让子元素变成一个伸缩项 */
+                display: flex;
+
+                /* justify-content 作用就是设置子元素盒子的（主轴）排列方式，有三个值：
+                    1.flex-start 就是从左往右排列，也叫做左对齐，同时这也是默认值
+                    2.center 就是中心对齐排列
+                    3.flex-end 就是右对齐
+                    另外还有两个值：
+                    1.space-around 就是每个子元素都会有同等宽度的左右边距，这样也导致了子元素和子元素之间的间距是两端子元素的间距的两倍
+                    2.space-between 就是每个子元素之间的间隙是相同的，但是两端子元素的边距没有了
+                 */
+                justify-content:space-between;
+            }
+            .first{
+                width: 200px;
+                height: 200px;
+                background-color: red;
+            }
+            .second{
+                width: 200px;
+                height: 200px;
+                background-color: green;
+            }
+            .third{
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+            }
+            .fourth{
+                width: 200px;
+                height: 200px;
+                background-color: greenyellow;
+            }
+            .fifth{
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="first">1</div>
+            <div class="second">2</div>
+            <div class="third">3</div>
+            <div class="fourth">4</div>
+            <div class="fifth">5</div>
+        </div>
+    </body>
+</html>
